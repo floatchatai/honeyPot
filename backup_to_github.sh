@@ -11,6 +11,14 @@ cp -p /etc/systemd/system/freeswitch.service /etc/systemd/system/fs-watchdog.* s
 cp -p /etc/cron.d/voip-* system/cron/ 2>/dev/null
 cp -p /usr/local/sbin/update_voip_* /usr/local/sbin/voip_retention /usr/local/bin/fs_watchdog.sh system/sbin/ 2>/dev/null
 cp -p /root/opt.sh /root/gatecheck.sh /root/moddiag.sh system/root/ 2>/dev/null
+# --- extra items: dialplan audio, rtpengine, fs_cli wrapper, FreeSWITCH TLS certs, replica panel, empmonitor stack ---
+mkdir -p system/files system/rtpengine system/bin system/freeswitch/certs system/voip-replica system/empmonitor
+rsync -a --delete /opt/files/ system/files/ 2>/dev/null
+cp -p /etc/rtpengine/rtpengine.conf system/rtpengine/ 2>/dev/null; cp -p /etc/systemd/system/rtpengine.service system/systemd/ 2>/dev/null
+cp -p /usr/local/bin/fs_cli system/bin/ 2>/dev/null
+rsync -a --delete /usr/local/freeswitch/certs/ system/freeswitch/certs/ 2>/dev/null
+rsync -a --delete --exclude 'recordings/' --exclude 'transcripts/' --exclude 'peaks/' --exclude '.credentials' --exclude '.session_secret' --exclude '.azure.env' --exclude '__pycache__/' --exclude 'backups/' /opt/voip-replica/ system/voip-replica/ 2>/dev/null
+rsync -a --delete --exclude '.env' --exclude '*.env' --exclude 'data/' --exclude 'postgres*/' --exclude 'node_modules/' /opt/empmonitor/ system/empmonitor/ 2>/dev/null
 # FreeSWITCH event-socket password must not go to GitHub
 sed -i -E 's/(name="password" value=")[^"]*(")/\1REDACTED\2/' system/freeswitch/conf/autoload_configs/event_socket.conf.xml 2>/dev/null
 git add -A
