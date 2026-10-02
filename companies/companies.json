@@ -46,16 +46,7 @@
    "name": "MCM",
    "enabled": true,
    "source_ips": [
-    "38.147.130.91",
-    "38.147.130.94",
-    "38.147.130.240",
-    "38.147.130.237",
-    "38.147.130.239",
-    "38.147.130.238",
-    "38.147.130.104",
-    "38.147.130.241",
-    "38.65.82.55",
-    "38.65.82.56"
+    "38.147.130.91"
    ],
    "did_prefixes": [],
    "vendor": "38.147.130.91:5060",
@@ -67,69 +58,6 @@
      "name": "MCM_SD",
      "ip": "38.147.130.91:5060",
      "tech_prefix": "8830",
-     "enabled": true
-    },
-    {
-     "id": "ace-sd",
-     "name": "ACE_SD",
-     "ip": "38.147.130.94:5060",
-     "tech_prefix": "8831",
-     "enabled": true
-    },
-    {
-     "id": "tech-sd",
-     "name": "TECH_SD",
-     "ip": "38.147.130.240:5060",
-     "tech_prefix": "8832",
-     "enabled": true
-    },
-    {
-     "id": "twiching-sd",
-     "name": "Twiching_SD",
-     "ip": "38.147.130.237:5060",
-     "tech_prefix": "8833",
-     "enabled": true
-    },
-    {
-     "id": "softtop-sd",
-     "name": "Softtop_SD",
-     "ip": "38.147.130.239:5060",
-     "tech_prefix": "8834",
-     "enabled": true
-    },
-    {
-     "id": "letsdial-sd",
-     "name": "LetsDial_SD",
-     "ip": "38.147.130.238:5060",
-     "tech_prefix": "8835",
-     "enabled": true
-    },
-    {
-     "id": "ajoxi-sd",
-     "name": "Ajoxi_SD",
-     "ip": "38.147.130.104:5060",
-     "tech_prefix": "8836",
-     "enabled": true
-    },
-    {
-     "id": "meratalk-sd",
-     "name": "Meratalk_SD",
-     "ip": "38.147.130.241:5060",
-     "tech_prefix": "8837",
-     "enabled": true
-    },
-    {
-     "id": "teloz-sd",
-     "name": "Teloz_SD",
-     "ip": "38.65.82.55:5060",
-     "tech_prefix": "8838",
-     "enabled": true
-    },
-    {
-     "id": "rozper-sd",
-     "name": "Rozper_SD",
-     "ip": "38.65.82.56:5060",
-     "tech_prefix": "8839",
      "enabled": true
     }
    ],
@@ -143,132 +71,6 @@
      ],
      "prefix": "7830",
      "vendor_trunk": "default",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "acepeak-sd",
-     "name": "AcePeak_SD",
-     "ips": [
-      "38.147.130.94"
-     ],
-     "prefix": "7831",
-     "vendor_trunk": "ace-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "techopen-sd",
-     "name": "TechOpen_SD",
-     "ips": [
-      "38.147.130.240"
-     ],
-     "prefix": "7832",
-     "vendor_trunk": "tech-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "twiching-sd",
-     "name": "Twiching_SD",
-     "ips": [
-      "38.147.130.237"
-     ],
-     "prefix": "7833",
-     "vendor_trunk": "twiching-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "softtop-sd",
-     "name": "Softtop_SD",
-     "ips": [
-      "38.147.130.239"
-     ],
-     "prefix": "7834",
-     "vendor_trunk": "softtop-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "lets-dial-sd",
-     "name": "Lets Dial_SD",
-     "ips": [
-      "38.147.130.238"
-     ],
-     "prefix": "7835",
-     "vendor_trunk": "letsdial-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "ajoxi-sd",
-     "name": "Ajoxi_SD",
-     "ips": [
-      "38.147.130.104"
-     ],
-     "prefix": "7836",
-     "vendor_trunk": "ajoxi-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "meratalk-sd",
-     "name": "Meratalk_SD",
-     "ips": [
-      "38.147.130.241"
-     ],
-     "prefix": "7837",
-     "vendor_trunk": "meratalk-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "teloz-sd",
-     "name": "Teloz_SD",
-     "ips": [
-      "38.65.82.55"
-     ],
-     "prefix": "7838",
-     "vendor_trunk": "teloz-sd",
-     "carrier": "",
-     "ani_ranges": [],
-     "gate_mode": "",
-     "gate_threshold": 0,
-     "cps_limit": 0
-    },
-    {
-     "id": "rozper-sd",
-     "name": "Rozper_SD",
-     "ips": [
-      "38.65.82.56"
-     ],
-     "prefix": "7839",
-     "vendor_trunk": "rozper-sd",
      "carrier": "",
      "ani_ranges": [],
      "gate_mode": "",
@@ -525,7 +327,7 @@
    "vendor_trunks": [
     {
      "id": "default",
-     "name": "Default vendor",
+     "name": "MeraTalk",
      "ip": "38.147.130.241",
      "tech_prefix": "9217",
      "enabled": true
@@ -539,8 +341,13 @@
      "ips": [
       "38.147.130.241"
      ],
-     "prefix": "",
-     "vendor_trunk": ""
+     "prefix": "9141",
+     "vendor_trunk": "",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
     }
    ],
    "kyc": {},
@@ -550,7 +357,7 @@
    "allow_ani": "",
    "force_ani": "",
    "created": 1790869455,
-   "updated": 1790869455
+   "updated": 1790935970
   },
   {
    "id": "teloz-limited",

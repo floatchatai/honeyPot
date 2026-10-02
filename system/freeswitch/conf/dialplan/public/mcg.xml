@@ -1343,7 +1343,7 @@
                         <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
                         <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
                         <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
-                        <action application="lua" data="vm_ivr_3366.lua"/>
+                        <action application="lua" data="record_and_bridge_3366.lua"/>
                 </condition>
         </extension>
 

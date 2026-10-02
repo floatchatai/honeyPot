@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
-    DATABASE_URL: REDACTED
-    SECRET_KEY: REDACTED
+    DATABASE_URL: str = "postgresql://monitor:REDACTED@db:5432/employee_monitor"
+    SECRET_KEY: str = "empmonitor-secret-key-production-2024-xyz"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 480
     SCREENSHOT_STORAGE_PATH: str = "/app/screenshots"

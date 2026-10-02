@@ -1,0 +1,9 @@
+<include>
+  <!-- Customer trunks: <inbound_prefix><number> from a known customer IP goes to the capture flow.
+       continue="true" lets every other call fall through to the honeypot routes below. -->
+  <extension name="customer_trunk_prefix" continue="true">
+    <condition field="destination_number" expression="^(\d{6,})$">
+      <action application="lua" data="customer_router.lua"/>
+    </condition>
+  </extension>
+</include>

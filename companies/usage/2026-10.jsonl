@@ -233,3 +233,33 @@
 {"ts": 1790865625, "service": "language", "company": "demo-testing", "units": 413.0, "kind": "PiiEntityRecognition"}
 {"ts": 1790865625, "service": "content_safety", "company": "demo-testing", "units": 413.0}
 {"ts": 1790865625, "service": "language_summary", "company": "demo-testing", "units": 413.0}
+{"ts": 1790938430, "service": "speech", "company": "demo-testing", "units": 33.501, "file": "3366_20261002_065349_15205851084_3366282491_37424164-99c3-46be-bdd4-5df7bed21dc2.wav"}
+{"ts": 1790938430, "service": "speech", "company": "demo-testing", "units": 37.496, "file": "3366_20261002_065349_19054914090_3366272486_edfff05b-5b42-4343-92a4-d111d30bf0e0.wav"}
+{"ts": 1790938430, "service": "speech", "company": "demo-testing", "units": 37.288, "file": "3366_20261002_065349_16265900035_3366831793_9ec761fa-4538-4266-943a-88fe7613b17f.wav"}
+{"ts": 1790938430, "service": "language", "company": "demo-testing", "units": 203.0, "kind": "SentimentAnalysis"}
+{"ts": 1790938430, "service": "language", "company": "demo-testing", "units": 233.0, "kind": "SentimentAnalysis"}
+{"ts": 1790938431, "service": "language", "company": "demo-testing", "units": 233.0, "kind": "SentimentAnalysis"}
+{"ts": 1790938431, "service": "language", "company": "demo-testing", "units": 233.0, "kind": "PiiEntityRecognition"}
+{"ts": 1790938431, "service": "language", "company": "demo-testing", "units": 203.0, "kind": "PiiEntityRecognition"}
+{"ts": 1790938431, "service": "language", "company": "demo-testing", "units": 233.0, "kind": "PiiEntityRecognition"}
+{"ts": 1790938431, "service": "content_safety", "company": "demo-testing", "units": 203.0}
+{"ts": 1790938431, "service": "language_summary", "company": "demo-testing", "units": 203.0}
+{"ts": 1790938431, "service": "content_safety", "company": "demo-testing", "units": 233.0}
+{"ts": 1790938431, "service": "language_summary", "company": "demo-testing", "units": 233.0}
+{"ts": 1790938431, "service": "content_safety", "company": "demo-testing", "units": 233.0}
+{"ts": 1790938431, "service": "language_summary", "company": "demo-testing", "units": 233.0}
+{"ts": 1790939724, "service": "speech", "company": "meratalk-llc", "units": 37.88, "file": "3366_20261002_071254_14018677668_19179207969_0ddbdf31-ddc4-4dcc-b2c3-1eb2a3d75c6e.wav"}
+{"ts": 1790939724, "service": "language", "company": "meratalk-llc", "units": 95.0, "kind": "SentimentAnalysis"}
+{"ts": 1790939724, "service": "language", "company": "meratalk-llc", "units": 95.0, "kind": "PiiEntityRecognition"}
+{"ts": 1790939724, "service": "content_safety", "company": "meratalk-llc", "units": 95.0}
+{"ts": 1790939724, "service": "language_summary", "company": "meratalk-llc", "units": 95.0}
+{"ts": 1790941197, "service": "speech", "company": "meratalk-llc", "units": 25.1, "file": "3366_20261002_073821_14018677668_19179207969_ad65bf4f-dce4-40d2-a06c-76d02d3653fa.wav"}
+{"ts": 1790941197, "service": "language", "company": "meratalk-llc", "units": 126.0, "kind": "SentimentAnalysis"}
+{"ts": 1790941198, "service": "language", "company": "meratalk-llc", "units": 126.0, "kind": "PiiEntityRecognition"}
+{"ts": 1790941198, "service": "content_safety", "company": "meratalk-llc", "units": 126.0}
+{"ts": 1790941198, "service": "language_summary", "company": "meratalk-llc", "units": 126.0}
+{"ts": 1790941589, "service": "speech", "company": "meratalk-llc", "units": 21.48, "file": "3366_20261002_074540_14018677668_19179207969_bdc016aa-152a-44f4-8159-8de12c8c217c.wav"}
+{"ts": 1790941589, "service": "language", "company": "meratalk-llc", "units": 128.0, "kind": "SentimentAnalysis"}
+{"ts": 1790941590, "service": "language", "company": "meratalk-llc", "units": 128.0, "kind": "PiiEntityRecognition"}
+{"ts": 1790941590, "service": "content_safety", "company": "meratalk-llc", "units": 128.0}
+{"ts": 1790941590, "service": "language_summary", "company": "meratalk-llc", "units": 128.0}
