@@ -1,0 +1,2 @@
+# Nightly backup of the VoIP panel and system config to GitHub (floatchatai/honeyPot) at 02:30 server time.
+30 2 * * * root /opt/voip/backup_to_github.sh >> /var/log/voip-backup.log 2>&1
