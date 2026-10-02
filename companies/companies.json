@@ -1,0 +1,639 @@
+{
+ "companies": [
+  {
+   "id": "ace-peak",
+   "name": "Ace Peak",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.94"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.94",
+   "vendor_prefix": "9896",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.147.130.94",
+     "tech_prefix": "9896",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.147.130.94"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790783006,
+   "updated": 1790783006
+  },
+  {
+   "id": "mcm",
+   "name": "MCM",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.91",
+    "38.147.130.94",
+    "38.147.130.240",
+    "38.147.130.237",
+    "38.147.130.239",
+    "38.147.130.238",
+    "38.147.130.104",
+    "38.147.130.241",
+    "38.65.82.55",
+    "38.65.82.56"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.91:5060",
+   "vendor_prefix": "8830",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "MCM_SD",
+     "ip": "38.147.130.91:5060",
+     "tech_prefix": "8830",
+     "enabled": true
+    },
+    {
+     "id": "ace-sd",
+     "name": "ACE_SD",
+     "ip": "38.147.130.94:5060",
+     "tech_prefix": "8831",
+     "enabled": true
+    },
+    {
+     "id": "tech-sd",
+     "name": "TECH_SD",
+     "ip": "38.147.130.240:5060",
+     "tech_prefix": "8832",
+     "enabled": true
+    },
+    {
+     "id": "twiching-sd",
+     "name": "Twiching_SD",
+     "ip": "38.147.130.237:5060",
+     "tech_prefix": "8833",
+     "enabled": true
+    },
+    {
+     "id": "softtop-sd",
+     "name": "Softtop_SD",
+     "ip": "38.147.130.239:5060",
+     "tech_prefix": "8834",
+     "enabled": true
+    },
+    {
+     "id": "letsdial-sd",
+     "name": "LetsDial_SD",
+     "ip": "38.147.130.238:5060",
+     "tech_prefix": "8835",
+     "enabled": true
+    },
+    {
+     "id": "ajoxi-sd",
+     "name": "Ajoxi_SD",
+     "ip": "38.147.130.104:5060",
+     "tech_prefix": "8836",
+     "enabled": true
+    },
+    {
+     "id": "meratalk-sd",
+     "name": "Meratalk_SD",
+     "ip": "38.147.130.241:5060",
+     "tech_prefix": "8837",
+     "enabled": true
+    },
+    {
+     "id": "teloz-sd",
+     "name": "Teloz_SD",
+     "ip": "38.65.82.55:5060",
+     "tech_prefix": "8838",
+     "enabled": true
+    },
+    {
+     "id": "rozper-sd",
+     "name": "Rozper_SD",
+     "ip": "38.65.82.56:5060",
+     "tech_prefix": "8839",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "MCM_SD",
+     "ips": [
+      "38.147.130.91"
+     ],
+     "prefix": "7830",
+     "vendor_trunk": "default",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "acepeak-sd",
+     "name": "AcePeak_SD",
+     "ips": [
+      "38.147.130.94"
+     ],
+     "prefix": "7831",
+     "vendor_trunk": "ace-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "techopen-sd",
+     "name": "TechOpen_SD",
+     "ips": [
+      "38.147.130.240"
+     ],
+     "prefix": "7832",
+     "vendor_trunk": "tech-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "twiching-sd",
+     "name": "Twiching_SD",
+     "ips": [
+      "38.147.130.237"
+     ],
+     "prefix": "7833",
+     "vendor_trunk": "twiching-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "softtop-sd",
+     "name": "Softtop_SD",
+     "ips": [
+      "38.147.130.239"
+     ],
+     "prefix": "7834",
+     "vendor_trunk": "softtop-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "lets-dial-sd",
+     "name": "Lets Dial_SD",
+     "ips": [
+      "38.147.130.238"
+     ],
+     "prefix": "7835",
+     "vendor_trunk": "letsdial-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "ajoxi-sd",
+     "name": "Ajoxi_SD",
+     "ips": [
+      "38.147.130.104"
+     ],
+     "prefix": "7836",
+     "vendor_trunk": "ajoxi-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "meratalk-sd",
+     "name": "Meratalk_SD",
+     "ips": [
+      "38.147.130.241"
+     ],
+     "prefix": "7837",
+     "vendor_trunk": "meratalk-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "teloz-sd",
+     "name": "Teloz_SD",
+     "ips": [
+      "38.65.82.55"
+     ],
+     "prefix": "7838",
+     "vendor_trunk": "teloz-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    },
+    {
+     "id": "rozper-sd",
+     "name": "Rozper_SD",
+     "ips": [
+      "38.65.82.56"
+     ],
+     "prefix": "7839",
+     "vendor_trunk": "rozper-sd",
+     "carrier": "",
+     "ani_ranges": [],
+     "gate_mode": "",
+     "gate_threshold": 0,
+     "cps_limit": 0
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1789463624,
+   "updated": 1790870170
+  },
+  {
+   "id": "demo-testing",
+   "name": "Demo Testing",
+   "enabled": true,
+   "source_ips": [],
+   "did_prefixes": [],
+   "vendor": "",
+   "vendor_prefix": "",
+   "notes": "",
+   "vendor_trunks": [],
+   "default_vendor": "",
+   "customer_trunks": [],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790861383,
+   "updated": 1790861383
+  },
+  {
+   "id": "techknowledge-open-systems-cc",
+   "name": "TechKnowledge Open Systems CC",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.240"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.240",
+   "vendor_prefix": "9212",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.147.130.240",
+     "tech_prefix": "9212",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.147.130.240"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869362,
+   "updated": 1790869362
+  },
+  {
+   "id": "twiching-general-trading-pte-ltd",
+   "name": "Twiching General Trading Pte Ltd",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.237"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.237",
+   "vendor_prefix": "9213",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.147.130.237",
+     "tech_prefix": "9213",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.147.130.237"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869384,
+   "updated": 1790869384
+  },
+  {
+   "id": "softtop-limited",
+   "name": "Softtop Limited",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.239"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.239",
+   "vendor_prefix": "9214",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.147.130.239",
+     "tech_prefix": "9214",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.147.130.239"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869397,
+   "updated": 1790869397
+  },
+  {
+   "id": "lets-dial-sg-pte-ltd",
+   "name": "Lets Dial SG Pte Ltd",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.238"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.238",
+   "vendor_prefix": "9215",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.147.130.238",
+     "tech_prefix": "9215",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.147.130.238"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869427,
+   "updated": 1790869427
+  },
+  {
+   "id": "ajoxi-limited",
+   "name": "Ajoxi Limited",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.104"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.104",
+   "vendor_prefix": "9216",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.147.130.104",
+     "tech_prefix": "9216",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.147.130.104"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869441,
+   "updated": 1790869441
+  },
+  {
+   "id": "meratalk-llc",
+   "name": "Meratalk LLC",
+   "enabled": true,
+   "source_ips": [
+    "38.147.130.241"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.147.130.241",
+   "vendor_prefix": "9217",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.147.130.241",
+     "tech_prefix": "9217",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.147.130.241"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869455,
+   "updated": 1790869455
+  },
+  {
+   "id": "teloz-limited",
+   "name": "Teloz Limited",
+   "enabled": true,
+   "source_ips": [
+    "38.65.82.55"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.65.82.55",
+   "vendor_prefix": "9218",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.65.82.55",
+     "tech_prefix": "9218",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.65.82.55"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869484,
+   "updated": 1790869484
+  },
+  {
+   "id": "rozper-limited",
+   "name": "Rozper Limited",
+   "enabled": true,
+   "source_ips": [
+    "38.65.82.56"
+   ],
+   "did_prefixes": [],
+   "vendor": "38.65.82.56",
+   "vendor_prefix": "9219",
+   "notes": "",
+   "vendor_trunks": [
+    {
+     "id": "default",
+     "name": "Default vendor",
+     "ip": "38.65.82.56",
+     "tech_prefix": "9219",
+     "enabled": true
+    }
+   ],
+   "default_vendor": "default",
+   "customer_trunks": [
+    {
+     "id": "default",
+     "name": "Default customer",
+     "ips": [
+      "38.65.82.56"
+     ],
+     "prefix": "",
+     "vendor_trunk": ""
+    }
+   ],
+   "kyc": {},
+   "azure": {},
+   "dnc": "",
+   "consent": "",
+   "allow_ani": "",
+   "force_ani": "",
+   "created": 1790869498,
+   "updated": 1790869498
+  }
+ ],
+ "enforce_acl": true
+}

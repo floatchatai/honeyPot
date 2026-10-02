@@ -1,0 +1,35 @@
+      <extension name="2106_prefix_dialplan">
+          <condition field="destination_number" expression="^2106(\d+)$">
+                                <action application="ring_ready" />
+                                <action application="sleep" data="10"/>
+                                <action application="set" data="sip_remove_183sdp=true"/>
+                                <action application="set" data="call_timeout=10"/>
+                                <action application="set" data="bridge_answer_timeout=10"/>
+                                <action application="set" data="originate_timeout=10"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="bridge" data="sofia/external/21058988@199.38.244.110:5062"/>
+                </condition>
+        </extension>
+
+
+
+        <extension name="2105_prefix_dialplan">
+                <condition field="destination_number" expression="^2105(\d+)$">
+                                <!--<action application="set" data="sip_h_X-Response-Code=487"/>-->
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                                <action application="playback" data="tone_stream://%(2000,4000,440.0,480.0)"/>
+                </condition>
+        </extension>
+        

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run FreeSWITCH Watchdog every minute
+
+[Timer]
+OnBootSec=60s
+OnUnitActiveSec=60s
+AccuracySec=10s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

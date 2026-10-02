@@ -1,0 +1,2 @@
+# Do Not Originate: numbers that must never appear as a calling number (inbound-only lines, hotlines,
+# customer-declared numbers). One number per line, 10 or 11 digits. Lines starting with # are ignored.

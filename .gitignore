@@ -1,0 +1,25 @@
+# --- secrets: never commit ---
+.azure.env
+.credentials
+.session_secret
+companies/users.json
+# --- audio, transcripts, personal data (keep out of GitHub) ---
+recordings/
+trash/
+transcripts/
+peaks/
+companies/decisions/
+spam_events/
+spam_decisions/
+# --- vendored binaries and downloaded datasets (not source) ---
+lib/
+fs/
+bin/
+spam_reputation_versions/
+spam_reputation_current
+# --- derived / temporary ---
+__pycache__/
+backups/
+*.tmp
+*.part
+*.pyc

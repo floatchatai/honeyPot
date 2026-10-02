@@ -1,0 +1,1469 @@
+           <extension name="Prefix_3380">
+                <condition field="destination_number" expression="^3380(\d+)$">
+            <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+            <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+            <action application="lua" data="vm_ivr_3380.lua"/>
+                </condition>
+        </extension>
+
+        <extension name="Prefix_3381">
+                    <condition field="destination_number" expression="^3381(\d+)$">
+                <action application="export" data="destination_number_ori=$1"/>
+                            <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                            <action application="sleep" data="${delay}"/>
+                <action application="ring_ready"/>
+                            <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                            <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                            <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                            <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                <action application="lua" data="vm_ivr_3381.lua"/>
+                    </condition>
+            </extension>
+
+
+       <extension name="australia_9092">
+                <condition field="destination_number" expression="^9092(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/aus_ivr/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+        <extension name="italy_9096">
+                <condition field="destination_number" expression="^9096(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/ukvm/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+ <extension name="spain_num_say_two_3389">
+                <condition field="destination_number" expression="^3389(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="playback" data="/opt/spain_num_say/Spain-Start.wav"/>
+                        <action application="lua" data="spain_num_say.lua"/>
+                        <action application="playback" data="/opt/spain_num_say/Spain-End.wav"/>
+                </condition>
+        </extension>
+
+
+       <extension name="italy_num_say_two_3399">
+                <condition field="destination_number" expression="^3399(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="playback" data="/opt/italy_ivr_two/Italy2_Start.wav"/>
+                        <action application="lua" data="vm_ivr_3399_two.lua"/>
+                        <action application="playback" data="/opt/italy_ivr_two/Italy2_End.wav"/>
+                </condition>
+        </extension>
+
+
+
+       <extension name="uk_voicemal_2888">
+                <condition field="destination_number" expression="^2888(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/2888/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+       <extension name="australia_2266">
+                <condition field="destination_number" expression="^2266(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="lua" data="aus_2266.lua"/>
+                        <action application="playback" data="/opt/australia/end.wav"/>
+                </condition>
+        </extension>
+
+
+      <extension name="aus_2272">
+                <condition field="destination_number" expression="^2272(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+			<action application="playback" data="/opt/aus_2272/start.wav"
+                        <action application="lua" data="aus_2272.lua"/>
+                        <action application="playback" data="/opt/aus_2272/end.wav"/>
+                </condition>
+        </extension>
+
+
+
+
+	<extension name="mal_vm_2">
+                <condition field="destination_number" expression="^2288(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="playback" data="/opt/mal_vm_02/start.wav"/>
+                        <action application="lua" data="mal_vm_02.lua"/>
+                        <action application="playback" data="/opt/mal_vm_02/end.wav"/>
+                </condition>
+        </extension>
+
+
+       <extension name="mal_vm_3">
+                <condition field="destination_number" expression="^2233(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="playback" data="/opt/mal_vm_03/start.wav"/>
+                        <action application="lua" data="mal_vm_03.lua"/>
+                        <action application="playback" data="/opt/mal_vm_03/end.wav"/>
+                </condition>
+        </extension>
+
+      <extension name="mal_vm_4">
+                <condition field="destination_number" expression="^2244(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="playback" data="/opt/mal_vm_04/start.wav"/>
+                        <action application="lua" data="mal_vm_04.lua"/>
+                        <action application="playback" data="/opt/mal_vm_04/end.wav"/>
+                </condition>
+        </extension>
+
+
+       <extension name="malasia2025_9084">
+                <condition field="destination_number" expression="^9084(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/malasia2025july/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+        <extension name="ring_9155">
+                <condition field="destination_number" expression="^9155(\d+)$">
+                        <!--<action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>-->
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/9155/${rand_num}.wav"/>
+                        <!--<action application="sleep" data="1000000"/>-->
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+<extension name="many_2001">
+  <condition field="destination_number" expression="^2001(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a1-rbt.wav"/>
+
+    <!-- Equivalent of Lua starts here -->
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a1-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+<extension name="many_2002">
+  <condition field="destination_number" expression="^2002(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a2-rbt.wav"/>
+
+    <!-- Equivalent of Lua starts here -->
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a2-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+<extension name="many_2003">
+  <condition field="destination_number" expression="^2003(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a3-rbt.wav"/>
+
+    <!-- Equivalent of Lua starts here -->
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a3-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+<extension name="many_2004">
+  <condition field="destination_number" expression="^2004(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a4-rbt.wav"/>
+
+    <!-- Equivalent of Lua starts here -->
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a4-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+
+<extension name="many_2005">
+  <condition field="destination_number" expression="^2005(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a5-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a5-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2006">
+  <condition field="destination_number" expression="^2006(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a6-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a6-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2007">
+  <condition field="destination_number" expression="^2007(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a7-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a7-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2008">
+  <condition field="destination_number" expression="^2008(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a8-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a8-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2009">
+  <condition field="destination_number" expression="^2009(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a9-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a9-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2010">
+  <condition field="destination_number" expression="^2010(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a10-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a10-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2011">
+  <condition field="destination_number" expression="^2011(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a11-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a11-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2012">
+  <condition field="destination_number" expression="^2012(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a12-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a12-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2013">
+  <condition field="destination_number" expression="^2013(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a13-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a13-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="many_2014">
+  <condition field="destination_number" expression="^2014(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/many/a14-rbt.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/many/a14-incall.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+
+<extension name="chille_2015">
+  <condition field="destination_number" expression="^2015(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c1_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c1_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2016">
+  <condition field="destination_number" expression="^2016(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c2_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c2_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2017">
+  <condition field="destination_number" expression="^2017(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c3_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c3_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2018">
+  <condition field="destination_number" expression="^2018(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c4_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c4_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2019">
+  <condition field="destination_number" expression="^2019(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c5_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c5_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2020">
+  <condition field="destination_number" expression="^2020(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c6_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c6_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2021">
+  <condition field="destination_number" expression="^2021(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c7_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c7_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2022">
+  <condition field="destination_number" expression="^2022(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c8_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c8_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2023">
+  <condition field="destination_number" expression="^2023(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c9_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c9_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+<extension name="chille_2024">
+  <condition field="destination_number" expression="^2024(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/chilleivr/c10_ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/chilleivr/c10_ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+
+<extension name="turkey_2025">
+  <condition field="destination_number" expression="^2025(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/turkey/tr1ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/turkey/tr1ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+<extension name="turkey_2026">
+  <condition field="destination_number" expression="^2026(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/turkey/tr2ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/turkey/tr2ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+
+<extension name="turkey_2027">
+  <condition field="destination_number" expression="^2027(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/turkey/tr3ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/turkey/tr3ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+
+<extension name="turkey_2028">
+  <condition field="destination_number" expression="^2028(\d+)$">
+    <action application="export" data="destination_number_ori=$1"/>
+    <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+    <action application="sleep" data="${delay}"/>
+    <action application="ring_ready"/>
+    <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+    <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+    <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+    <action application="playback" data="/opt/turkey/tr4ring.wav"/>
+    <action application="answer"/>
+    <action application="set" data="playback_timeout_sec=120"/>
+    <action application="playback" data="/opt/turkey/tr4ivr.wav"/>
+    <action application="sleep" data="120000"/>
+    <action application="hangup"/>
+  </condition>
+</extension>
+
+
+
+
+	<extension name="china_9278">
+                <condition field="destination_number" expression="^9278(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <!--<action application="playback" data="/opt/ukvm//usr/local/freeswitch/sounds/china_new/${rand_num}.wav"/>-->
+			<action application="playback" data="/opt/china_new/china_wav/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+	<extension name="uk_voicemal_9094">
+                <condition field="destination_number" expression="^9094(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/ukvm/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+        <extension name="Saudi_7272">
+                <condition field="destination_number" expression="^7272(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/aaaa/Saundi_7272/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+        <extension name="Saudi_7273">
+                <condition field="destination_number" expression="^7273(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/aaaa/Saundi_7273/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+	<extension name="Tanzania_7274">
+                <condition field="destination_number" expression="^7274(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/aaaa/Tanzania/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+        <extension name="japan_7275">
+                <condition field="destination_number" expression="^7275(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/japan/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+       <extension name="mexicotwo_7276">
+                <condition field="destination_number" expression="^7276(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/aaaa/mexicotwo/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+       <extension name="aus_2895">
+                <condition field="destination_number" expression="^2895(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,114,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/aus_2895/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+<extension name="luxenburg_6235">
+                <condition field="destination_number" expression="^6235(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/6235/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+        <extension name="uk_voicemal_2588">
+                <condition field="destination_number" expression="^2588(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/2588/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+        <extension name="peru_9280">
+                <condition field="destination_number" expression="^9280(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/9280/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+<extension name="Prefix_test">
+                <condition field="destination_number" expression="^9099(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/test/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+<extension name="spain">
+                <condition field="destination_number" expression="^9097(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,41,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/spain/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+<extension name="ukring_9095">
+                <condition field="destination_number" expression="^9095(\d+)$">
+                        <!--<action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>-->
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/ukring/${rand_num}.wav"/>
+                        <!--<action application="sleep" data="1000000"/>-->
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+<extension name="Random_ringing_using_random_files">
+                <condition field="destination_number" expression="^9098(\d+)$">
+                        <!--<action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>-->
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,20,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/26nov/${rand_num}.wav"/>
+                        <!--<action application="sleep" data="1000000"/>-->
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+
+
+	  <extension name="Prefix_9679">
+                <condition field="destination_number" expression="^9679(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(7200,24800,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+        <extension name="Prefix_9689">
+                <condition field="destination_number" expression="^9689(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(8250,22830,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+        <extension name="Prefix_9699">
+                <condition field="destination_number" expression="^9699(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+	     <extension name="Prefix_01613">
+                <condition field="destination_number" expression="^01613(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=61"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,10,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/01613/${rand_num}.wav"/>
+                        <action application="sleep" data="61000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+      <extension name="Prefix_01612">
+                <condition field="destination_number" expression="^01612(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=61"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,10,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/01612/${rand_num}.wav"/>
+                        <action application="sleep" data="61000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+                </extension>
+
+
+
+	<extension name="Prefix_784">
+                <condition field="destination_number" expression="^784(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=1000"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,10,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/random/ivr_four/${rand_num}.wav"/>
+                        <action application="sleep" data="1000000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+ 	<extension name="Prefix_781">
+                <condition field="destination_number" expression="^781(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=3600"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,10,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/random/ivr_one/${rand_num}.wav"/>
+                        <action application="sleep" data="3600000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+ 	<extension name="Prefix_783">
+                <condition field="destination_number" expression="^783(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=61"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,10,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/random/ivr_three/${rand_num}.wav"/>
+                        <action application="sleep" data="61000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+	 <extension name="Prefix_782">
+                <condition field="destination_number" expression="^782(\d+)$">
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(9370,29939,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="set" data="call_timeout=120"/>
+                        <action application="set" data="hangup_after_bridge=false"/>
+                        <action application="set" data="rand_num=${expr(randomize(&x);ceil(random(1,10,&x)))}" inline="true"/>
+                        <action application="info" data="Selected random number: ${rand_num}"/>
+                        <action application="playback" data="/opt/random/ivr_two/${rand_num}.wav"/>
+                        <action application="sleep" data="120000"/>
+                        <action application="hangup" data="487"/>
+                </condition>
+        </extension>
+
+
+
+
+	<extension name="Prefix_4401_mexico">
+    	  <condition field="destination_number" expression="^4401(\d+)$">
+        	<action application="export" data="destination_number_ori=$1"/>
+	        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+        	<action application="sleep" data="${delay}"/>
+	        <action application="ring_ready"/>
+        	<action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+	        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+        	<action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+	        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+	        <action application="answer"/>
+	        <action application="log" data="INFO In IVR logic for Prefix"/>
+	        <action application="playback" data="/opt/aaaa/mexico/start.wav"/>
+		<action application="lua" data="generic_spell_digits.lua ${destination_number_ori} /opt/aaaa/mexico/"/>
+	        <action application="playback" data="/opt/aaaa/mexico/end.wav"/>
+	        <action application="sleep" data="180000"/>
+	        <action application="transfer" data="4401${destination_number_ori} XML default"/>
+	   </condition>
+	</extension>
+
+
+       <extension name="Prefix_3377">
+                <condition field="destination_number" expression="^3377(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(3490,15734,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="lua" data="vm_ivr_3377.lua"/>
+                </condition>
+        </extension>
+
+        
+
+        <extension name="Prefix_3366">
+                <condition field="destination_number" expression="^3366(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(5893,13385,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="lua" data="vm_ivr_3366.lua"/>
+                </condition>
+        </extension>
+
+
+        <extension name="Prefix_3355">
+                <condition field="destination_number" expression="^3355(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="lua" data="vm_3355.lua"/>
+                </condition>
+        </extension>
+
+
+
+       <extension name="Prefix_2267_aus_3355_copy">
+                <condition field="destination_number" expression="2267(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+		        <action application="sched_hangup" data="+120 allotted_timeout"/>
+		        <action application="set" data="playback_timeout_sec=120"/>
+		        <action application="playback" data="/opt/aus_3355_copy/aus_2267.wav"/>
+		        <action application="sleep" data="120000"/>
+		        <action application="hangup"/>
+		</condition>
+        </extension>
+
+
+
+       <extension name="Prefix_2268_aus_3355_copy">
+                <condition field="destination_number" expression="2268(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="sched_hangup" data="+120 allotted_timeout"/>
+                        <action application="set" data="playback_timeout_sec=120"/>
+                        <action application="playback" data="/opt/aus_3355_copy/aus_2268.wav"/>
+                        <action application="sleep" data="120000"/>
+                        <action application="hangup"/>
+                </condition>
+        </extension>
+
+
+       <extension name="Prefix_2269_aus_3355_copy">
+                <condition field="destination_number" expression="2269(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="sched_hangup" data="+120 allotted_timeout"/>
+                        <action application="set" data="playback_timeout_sec=120"/>
+                        <action application="playback" data="/opt/aus_3355_copy/aus_2269.wav"/>
+                        <action application="sleep" data="120000"/>
+                        <action application="hangup"/>
+                </condition>
+        </extension>
+
+
+       <extension name="Prefix_2270_aus_3355_copy">
+                <condition field="destination_number" expression="2270(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="sched_hangup" data="+120 allotted_timeout"/>
+                        <action application="set" data="playback_timeout_sec=120"/>
+                        <action application="playback" data="/opt/aus_3355_copy/aus_2270.wav"/>
+                        <action application="sleep" data="120000"/>
+                        <action application="hangup"/>
+                </condition>
+        </extension>
+
+       <extension name="Prefix_2271_aus_3355_copy">
+                <condition field="destination_number" expression="2271(\d+)$">
+                        <action application="export" data="destination_number_ori=$1"/>
+                        <action application="set" data="delay=${expr(randomize(&x);ceil(random(674,4049,&x)))}" inline="true"/>
+                        <action application="sleep" data="${delay}"/>
+                        <action application="ring_ready"/>
+                        <action application="set" data="randomms=${expr(randomize(&x);ceil(random(4284,12754,&x)))}" inline="true"/>
+                        <action application="set" data="samples_for_duration=${expr(${randomms} * 8)}" inline="true"/>
+                        <action application="set" data="start_sample=${expr(480000 - ${samples_for_duration})}" inline="true"/>
+                        <action application="playback" data="/opt/files/ringingmono.wav@@${start_sample}"/>
+                        <action application="answer"/>
+                        <action application="sched_hangup" data="+120 allotted_timeout"/>
+                        <action application="set" data="playback_timeout_sec=120"/>
+                        <action application="playback" data="/opt/aus_3355_copy/aus_2271.wav"/>
+                        <action application="sleep" data="120000"/>
+                        <action application="hangup"/>
+                </condition>
+        </extension>
+
+
+
+
+

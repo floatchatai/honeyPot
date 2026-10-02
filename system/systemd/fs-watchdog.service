@@ -1,0 +1,7 @@
+[Unit]
+Description=FreeSWITCH Watchdog (checks and restarts if needed)
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fs_watchdog.sh

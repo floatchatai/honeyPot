@@ -1,0 +1,7 @@
+{"ts": 1790860054.581, "when": "2026-10-01 09:07:34", "user": "admin", "ip": "127.0.0.1", "action": "user-delete", "target": "no-such-user-zz9", "ok": false, "detail": "confirmation text did not match"}
+{"ts": 1790860055.097, "when": "2026-10-01 09:07:35", "user": "admin", "ip": "127.0.0.1", "action": "user-delete", "target": "no-such-user-zz9", "ok": false, "detail": "password check failed"}
+{"ts": 1790860055.126, "when": "2026-10-01 09:07:35", "user": "admin", "ip": "127.0.0.1", "action": "company-delete", "target": "no-such-company-zz9", "ok": false, "detail": "confirmation text did not match"}
+{"ts": 1790860055.153, "when": "2026-10-01 09:07:35", "user": "admin", "ip": "127.0.0.1", "action": "simulations-purged", "target": "all", "ok": false, "detail": "confirmation text did not match"}
+{"ts": 1790860055.181, "when": "2026-10-01 09:07:35", "user": "admin", "ip": "127.0.0.1", "action": "recordings-trashed-all", "target": "all", "ok": false, "detail": "password check failed"}
+{"ts": 1790860055.21, "when": "2026-10-01 09:07:35", "user": "admin", "ip": "127.0.0.1", "action": "platform-key-removed", "target": "AZURE_OPENAI_KEY", "ok": false, "detail": "confirmation text did not match"}
+{"ts": 1790860055.238, "when": "2026-10-01 09:07:35", "user": "admin", "ip": "127.0.0.1", "action": "company-key-removed", "target": "no-such-company-zz9:SPEECH_KEY", "ok": false, "detail": "confirmation text did not match"}

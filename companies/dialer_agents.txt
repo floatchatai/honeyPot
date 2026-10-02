@@ -1,0 +1,10 @@
+# SIP User-Agent substrings (case-insensitive) that identify scanners and mass-dialer software. One per line.
+sipvicious
+friendly-scanner
+sipcli
+sip-scan
+sundayddr
+vaxsip
+pplsip
+sipp/
+sipsak

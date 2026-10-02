@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+"""Daily via cron. (1) Delete call artefacts older than retention_days (0 = keep forever) from gate.json.
+(2) Purge the panel trash folder (recordings removed from the UI) after VOIP_TRASH_DAYS days (default 7)."""
+import os, json, time, glob
+cfg = {}
+try:
+    cfg = json.load(open("/opt/voip/companies/gate.json"))
+except Exception:
+    pass
+days = int(cfg.get("retention_days") or 0)
+n = 0
+if days > 0:
+    cutoff = time.time() - days * 86400
+    for pattern in ("/opt/voip/recordings/3366_*.wav", "/opt/voip/recordings/3366_*.meta", "/opt/voip/transcripts/3366_*.txt",
+                    "/opt/voip/transcripts/analysis/3366_*.json", "/opt/voip/transcripts/translations/3366_*.json", "/opt/voip/peaks/3366_*"):
+        for p in glob.glob(pattern):
+            try:
+                if os.stat(p).st_mtime < cutoff:
+                    os.remove(p); n += 1
+            except OSError:
+                continue
+    print("retention: removed %d files older than %d days" % (n, days))
+else:
+    print("retention: retention_days is 0, keeping everything")
+trash_days = int(os.environ.get("VOIP_TRASH_DAYS", "7") or 7)
+trash_dir = os.environ.get("VOIP_TRASH_DIR", "/opt/voip/trash")
+t = 0
+if trash_days > 0 and os.path.isdir(trash_dir):
+    cutoff = time.time() - trash_days * 86400
+    for p in glob.glob(os.path.join(trash_dir, "*")):
+        try:
+            if os.path.isfile(p) and os.stat(p).st_mtime < cutoff:
+                os.remove(p); t += 1
+        except OSError:
+            continue
+print("trash: purged %d files older than %d days" % (t, trash_days))

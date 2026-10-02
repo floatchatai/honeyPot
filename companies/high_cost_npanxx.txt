@@ -1,0 +1,1 @@
+# NANP NPA-NXX (6 digits per line) with access-stimulation / high terminating access charges. Empty until you add a rate-deck extract.

@@ -1,0 +1,18 @@
+#!/bin/sh
+# Weekly refresh of NANPA numbering data used by the gate (NPA assignment / in-service) and, when the
+# CO code assignment file is available, the allocated NPA-NXX set. Both are free public downloads.
+set -u
+D=/opt/voip/companies
+UA="Mozilla/5.0 (X11; Linux x86_64) VoIP-HoneyPot-numbering/1.0"
+tmp=$(mktemp)
+if curl -fsS -A "$UA" -m 60 "https://reports.nanpa.com/public/npa_report.csv" -o "$tmp" && grep -q "^NPA_ID" "$tmp"; then
+  mv "$tmp" "$D/npa_report.csv"; chown voip-panel:voip-panel "$D/npa_report.csv"; echo "npa_report.csv updated"
+else
+  rm -f "$tmp"; echo "npa_report.csv download failed; kept previous copy" >&2
+fi
+# Optional: NANPA Central Office Code assignment records (registration currently required). If an operator
+# drops the CSV/ZIP at $D/co_code_assignment_records.csv we derive the allocated NPA-NXX set from it.
+if [ -f "$D/co_code_assignment_records.csv" ]; then
+  awk -F',' 'NR>1 { gsub(/"/,"",$1); gsub(/"/,"",$2); if ($1 ~ /^[0-9][0-9][0-9]$/ && $2 ~ /^[0-9][0-9][0-9]$/) print $1 $2 }' "$D/co_code_assignment_records.csv" | sort -u > "$D/npanxx_allocated.txt.tmp" \
+    && mv "$D/npanxx_allocated.txt.tmp" "$D/npanxx_allocated.txt" && echo "npanxx_allocated.txt: $(wc -l < "$D/npanxx_allocated.txt") codes"
+fi

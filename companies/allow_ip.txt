@@ -1,0 +1,1 @@
+# allow_ip: one entry per line (numbers 10/11 digits, or IPv4). Lines starting with # are ignored.

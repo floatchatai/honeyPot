@@ -1,0 +1,69 @@
+# Brands and organisations commonly impersonated in scam and robocall campaigns. One per line: keyword|group
+# The keyword is matched case-insensitively in transcripts (word boundaries). Add your own brands.
+IRS|government
+Internal Revenue|government
+Social Security|government
+SSA|government
+Medicare|government
+Medicaid|government
+Department of Justice|government
+DEA|government
+FBI|government
+Homeland Security|government
+US Customs|government
+Border Patrol|government
+Treasury|government
+Federal Trade Commission|government
+Amazon|retail
+Walmart|retail
+Costco|retail
+Target|retail
+Best Buy|retail
+Geek Squad|tech
+Microsoft|tech
+Windows|tech
+Apple|tech
+iCloud|tech
+Google|tech
+Norton|tech
+McAfee|tech
+PayPal|financial
+Venmo|financial
+Zelle|financial
+Cash App|financial
+Bank of America|financial
+Wells Fargo|financial
+Chase|financial
+Citibank|financial
+Capital One|financial
+American Express|financial
+Discover Card|financial
+Visa|financial
+Mastercard|financial
+Navient|financial
+Student loan|financial
+FedEx|delivery
+UPS|delivery
+USPS|delivery
+DHL|delivery
+Netflix|media
+Spotify|media
+DirecTV|media
+Dish Network|media
+Comcast|utility
+Xfinity|utility
+Spectrum|utility
+AT&T|utility
+Verizon|utility
+T-Mobile|utility
+Duke Energy|utility
+Con Edison|utility
+Publishers Clearing House|prize
+Marriott|travel
+Hilton|travel
+Expedia|travel
+Blue Cross|healthcare
+UnitedHealthcare|healthcare
+Aetna|healthcare
+Humana|healthcare
+Cigna|healthcare

@@ -1,0 +1,12 @@
+# High-cost international destinations for IRSF / premium-rate / satellite detection (E.164 prefixes without +).
+# Seeded with objectively high-cost non-geographic ranges. Add your carrier's IRSF hot-list prefixes below.
+870      # Inmarsat
+8816     # Iridium
+8817     # Iridium
+88213    # Thuraya
+88216    # Thuraya
+882      # International networks (shared)
+883      # International networks (shared)
+979      # International premium rate service
+808      # International shared cost service
+881      # Global mobile satellite systems
