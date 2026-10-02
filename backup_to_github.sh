@@ -19,6 +19,9 @@ cp -p /usr/local/bin/fs_cli system/bin/ 2>/dev/null
 rsync -a --delete /usr/local/freeswitch/certs/ system/freeswitch/certs/ 2>/dev/null
 rsync -a --delete --exclude 'recordings/' --exclude 'transcripts/' --exclude 'peaks/' --exclude '.credentials' --exclude '.session_secret' --exclude '.azure.env' --exclude '__pycache__/' --exclude 'backups/' /opt/voip-replica/ system/voip-replica/ 2>/dev/null
 rsync -a --delete --exclude '.env' --exclude '*.env' --exclude 'data/' --exclude 'postgres*/' --exclude 'node_modules/' /opt/empmonitor/ system/empmonitor/ 2>/dev/null
+# never ship empmonitor's literal secrets
+sed -i -E 's/^(\s*-?\s*(POSTGRES_PASSWORD|SECRET_KEY|JWT_SECRET|DATABASE_URL)\s*[:=]\s*).*$/\1REDACTED/' system/empmonitor/docker-compose.yml 2>/dev/null
+sed -i -E 's/(postgres(ql)?:\/\/[^:@]+:)[^@]+@/\1REDACTED@/g' system/empmonitor/docker-compose.yml system/empmonitor/backend/app/config.py system/empmonitor/backend/app/database.py 2>/dev/null
 # FreeSWITCH event-socket password must not go to GitHub
 sed -i -E 's/(name="password" value=")[^"]*(")/\1REDACTED\2/' system/freeswitch/conf/autoload_configs/event_socket.conf.xml 2>/dev/null
 git add -A
